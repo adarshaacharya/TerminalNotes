@@ -1,36 +1,25 @@
 console.log('Starting the app.js..');
-
-const validator = require('validator');
-
-const chalk = require('chalk');
-
 const yargs = require('yargs');
-
 const notes = require('./notes.js')
 
-
-
 /*
+
+const validator = require('validator');
+const chalk = require('chalk');
 const fs = require('fs');
 // fetch all content of fs module and store in fs
 const os = require('os');
 
-
 const res = notes.addNote();
 console.log(res)
 
-
 var user =  os.userInfo();
-
 
 fs.appendFile('greetings.txt', 'Hello world', (err) => {
     if(err) {
         console.log("Error occured");
     }
 });
-
-
-
 
 const notes = require('./notes.js') 
 fs.appendFile('greetings.txt', `\nHello ${user.username} ! You are ${notes.age}`, err => {
@@ -39,18 +28,12 @@ fs.appendFile('greetings.txt', `\nHello ${user.username} ! You are ${notes.age}`
     }
 });
 
-
-
-
 console.log(validator.isEmail('adarsha@gmail.com'))
-
 
 console.log(chalk.blue('Hello world'));
 console.log(chalk.green.bold.underline('Success'));
 console.log(chalk.red.inverse('Error'))
 */
-
-
 
 
 
@@ -72,7 +55,6 @@ yargs.command ({
             type : 'string'
         }
     },
-
 
     handler(argv) {
         notes.addNote(argv.title, argv.body); //Prints title and body provided as i/p
@@ -101,14 +83,6 @@ yargs.command({
 });
 
 
-
-
-
-
-
-
-
-
 //List All Items in JSON Files
 yargs.command( {
     command : 'list',
@@ -118,8 +92,7 @@ yargs.command( {
     }
 })
 
-
-
+//Read the body of Note using Title
 yargs.command({
     command : 'read',
     describe : 'Read the command',

@@ -3,7 +3,6 @@ const chalk = require("chalk");
 
 
 //Adding the Notes
-
 const addNote = (title, body) => {
   const notes = loadNotes();
 
@@ -24,8 +23,8 @@ const addNote = (title, body) => {
     }
 };
 
-//Removing the Notes
 
+//Removing the Notes
 const removeNote = (argvTitle) => {
   const notes = loadNotes();
     /*
@@ -57,22 +56,18 @@ const removeNote = (argvTitle) => {
     saveNotes(notes);
     console.log(chalk.green.inverse(`${argvTitle} removed.`));
 
-
   } else {
     console.log(chalk.red.inverse(`No items of ${argvTitle} title found.\n\n`));
   }
 };
 
 
-
 //Listing the Notes
-
 const listNotes = () => {
     const notes = loadNotes();
     console.log(chalk.inverse("Your notes titles : "));
 
     notes.forEach(element => {
-  
         console.log(element.title);
         
     });
@@ -81,7 +76,6 @@ const listNotes = () => {
 
 
 //Read title and display full info about nodes
-
 const readNotes = (argvTitle)  => {
     const notes = loadNotes();
 
@@ -100,14 +94,10 @@ const readNotes = (argvTitle)  => {
 }
 
 
-
-
-
 const saveNotes = (notes) =>  {
   const dataJSON = JSON.stringify(notes);
   fs.writeFileSync("notes.json", dataJSON);
 };
-
 
 
 const loadNotes = () => {
@@ -123,9 +113,6 @@ const loadNotes = () => {
 
   }
 };
-
-
-
 
 
 module.exports = {
