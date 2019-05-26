@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # TerminalNotes 
 :memo: Terminal Notes is an app that helps to add, remove , list and read the notes via Command Line.
 
@@ -60,7 +60,3 @@ node app.js read --title="title_name"
 
 ---
 *Feel free to contribute and help improve the repo!*
-=======
-# TerminalNotes
-:memo:
->>>>>>> 6deab8944ff6e228523fbb66023a549114eafe5f
