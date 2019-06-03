@@ -59,4 +59,4 @@ node app.js read --title="title_name"
 ![Read](./img/read.png)
 
 ---
-*Feel free to contribute and help improve the repo!*
+*Feel free to contribute and help improve the project!*
